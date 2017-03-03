@@ -131,12 +131,12 @@
 <!-- Theme Background Related-->
 
     <style>
-      body{
+      body {
         background-color: #F5F5F5;
       }
 
       /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
         background-color: #fff;
       }
     </style>
@@ -181,6 +181,13 @@
     
 
     <!-- Bing Background -->
+    
+        <script type="text/javascript">
+            queue.offer(function(){
+                $('body').attr('data-original', 'https://api.i-meto.com/bing?[object Object]');
+                $('body.lazy').lazyload();
+            });
+        </script>
     
 
     <!-- Custom Head -->
@@ -282,9 +289,15 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
             
-                <a class="index_share-link" href="/about" title="About">
+                <a class="index_share-link" href="#about" title="About">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
                         About
+                    </li>
+                </a>
+            
+                <a class="index_share-link" href="/timeline/" title="timeline archive">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        timeline archive
                     </li>
                 </a>
             
@@ -296,6 +309,15 @@
             <span class="visuallyhidden">show menu</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+            
+                <!-- All Site UV -->
+                <a class="index_share-link" href="#">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        <span id="busuanzi_container_site_uv">
+                            <span id="busuanzi_value_site_uv"></span>&nbsp;浏览量
+                        </span>
+                    </li>
+                </a>
             
 
             
@@ -340,6 +362,8 @@
 
     <!-- Pin on top -->
     
+        
+    
 
     <!-- Normal Post -->
     
@@ -362,7 +386,7 @@
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            Hexo官网!根...
+            Hexo官网!根据
         
         &nbsp;&nbsp;&nbsp;
         <span>
@@ -491,6 +515,8 @@
             </a>
         </li>
         
+            <li class="divider"></li>
+        
     
 
     <!-- Archives  -->
@@ -509,15 +535,34 @@
             </ul>
         </li>
         
+            <li class="divider"></li>
+        
     
 
     <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/hexo学习/">hexo学习<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
     
 
     <!-- Pages  -->
     
         <li>
-            <a href="/about" title="About">
+            <a href="#about" title="About">
                 
                     <i class="material-icons sidebar-material-icons">person</i>
                 
@@ -526,8 +571,26 @@
         </li>
         
     
+        <li>
+            <a href="/timeline/" title="timeline archive">
+                
+                    <i class="material-icons sidebar-material-icons">about</i>
+                
+                timeline archive
+            </a>
+        </li>
+        
+    
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">1</span>
+            </a>
+        </li>
+        
     
 </ul>
 
@@ -549,13 +612,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -696,9 +752,14 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+    <script src="/js/smoothscroll.js"></script>
 
 
 
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 

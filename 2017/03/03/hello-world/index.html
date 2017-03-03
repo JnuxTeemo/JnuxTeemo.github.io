@@ -133,12 +133,12 @@
 <!-- Theme Background Related-->
 
     <style>
-      body{
+      body {
         background-color: #F5F5F5;
       }
 
       /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text {
         background-color: #fff;
       }
     </style>
@@ -183,6 +183,13 @@
     
 
     <!-- Bing Background -->
+    
+        <script type="text/javascript">
+            queue.offer(function(){
+                $('body').attr('data-original', 'https://api.i-meto.com/bing?[object Object]');
+                $('body.lazy').lazyload();
+            });
+        </script>
     
 
     <!-- Custom Head -->
@@ -304,6 +311,15 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+            <i class="material-icons" role="presentation">devices other</i>
+            <span class="visuallyhidden">devices other</span>
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+            <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXklEQVR42u3aS3KEMAwFwLn/pZMLBOZJMoZQ7RWL4dNOla08+fPz6vHBw8PDw8PDw8N7GO8Tj+pdh68/+GXvLX/chYeHh7eF92WpPfhN8kHRUh4/P/oGPDw8vI28ZMlOFv1z/NF0JE+LthM8PDy8f8I7ek6PjYeHh/c+Xh5YJOFCwsbDw8N7Jm9SKOfLfa+k3pS14OHh4cW8vMm0/3prfw8PDw8v4FVHdbmvFtbzgYeHh3c1rxc0TAru/MBB83vw8PDwtvCSm5MXJw2tVeHF6D8GPDw8vEW8XvNpEsLOA4vCxoCHh4d3Ma8Xqq4KLCa/x8PDw9vDqxbNeQwRLeXBUdfCRODh4eFdzMsfUW32V4PdZaEGHh4e3sW8eYOqF7lOguMveDw8PLwtvKTYrY7JxC2OcfHw8PAu4J1/yiQgyGPf/O3nfwA8PDy8Pby1BXQPmW8t5TACDw8PbykvL457IWy1LO412/Dw8PDu4p0/NAFPjhckvNHGgIeHh7eIV21E9YrvZAqqrTI8PDy85/AmcepoQY+PZ41Sajw8PLxFvOQ6X9yrxfQ82sDDw8O7i1cNc6vxRLUNlm8heHh4eHfxqte9llXveMEojMDDw8NbyusdI8gbYJOivDdZeHh4eFfzqstxNYCYxLvVrQUPDw9vJ28SQ+THCHolcnni8PDw8DbyJgcIeoVyPgXL+nt4eHh4N/Gqm0ovsOjFH3h4eHjP5OURQ1K+V6OQ0dEBPDw8vC2HrqoBQfQRg4YZHh4e3hN4kwggjyrysrsaEOPh4eHt5L1v4OHh4eHh4eHhPWD8AlbQfLj2Na3FAAAAAElFTkSuQmCC">
+        </ul>
+    
 
     <!-- Tags (bookmark) -->
     
@@ -325,6 +341,17 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
     
 
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
     
 
     <!-- Share Weibo -->
@@ -509,6 +536,8 @@
             </a>
         </li>
         
+            <li class="divider"></li>
+        
     
 
     <!-- Archives  -->
@@ -527,15 +556,34 @@
             </ul>
         </li>
         
+            <li class="divider"></li>
+        
     
 
     <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/hexo学习/">hexo学习<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
     
 
     <!-- Pages  -->
     
         <li>
-            <a href="/about" title="About">
+            <a href="#about" title="About">
                 
                     <i class="material-icons sidebar-material-icons">person</i>
                 
@@ -544,8 +592,26 @@
         </li>
         
     
+        <li>
+            <a href="/timeline/" title="timeline archive">
+                
+                    <i class="material-icons sidebar-material-icons">about</i>
+                
+                timeline archive
+            </a>
+        </li>
+        
+    
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">1</span>
+            </a>
+        </li>
+        
     
 </ul>
 
@@ -567,13 +633,6 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -714,9 +773,14 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+    <script src="/js/smoothscroll.js"></script>
 
 
 
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
